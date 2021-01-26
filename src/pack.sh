@@ -12,11 +12,11 @@ else
 fi
 cd ${PACK_PATH}
 
-dir_count=$(ls -l | grep "^d" | wc -l)
+DIR_COUNT=$(ls -l | grep "^d" | wc -l)
 i=1
 echo "${DIR_COUNT} folder(s) need to be packed in total."
 echo ""
-ls ${PACK_PATH} | while read $LINE
+ls ${PACK_PATH} | while read LINE
 do
     if [ -f "${PACK_PATH}/$LINE" ]; then
         continue;
